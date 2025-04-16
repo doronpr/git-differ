@@ -24,7 +24,6 @@ This lightweight and speedy VS Code extension allows you to effortlessly compare
 
 ## Roadmap
 
-- Statusbar Git blame (low priority)
 - Replace selection / file with revision (low priority)
 
 ## Download
