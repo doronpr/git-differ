@@ -22,10 +22,6 @@ This lightweight and speedy VS Code extension allows you to effortlessly compare
   <img src="https://raw.githubusercontent.com/Nico-Mayer/git-differ/main/public/showcase.gif" alt='preview'>
 </p>
 
-## Roadmap
-
-- Replace selection / file with revision (low priority)
-
 ## Download
 
 [Download from Marketplace](https://marketplace.visualstudio.com/items?itemName=nico-mayer.git-differ)

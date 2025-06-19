@@ -9,12 +9,12 @@
       {
         "category": "Git",
         "command": "git-differ.compareWithBranch",
-        "title": "Git Differ: Compare with Branch..."
+        "title": "Git Differ: Compare with Branch"
       },
       {
         "category": "Git",
         "command": "git-differ.compareWithCommit",
-        "title": "Git Differ: Compare with Commit..."
+        "title": "Git Differ: Compare with Commit"
       }
     ],
     "configuration": {
@@ -22,7 +22,7 @@
       "properties": {
         "git-differ.localOnly": {
           "default": false,
-          "description": "If turned on, only local branches will be shown in the compare with branch menu.",
+          "description": "If turned on, only local branches will be shown in the compare with menu.",
           "type": "boolean"
         },
         "git-differ.commitHistoryLength": {
