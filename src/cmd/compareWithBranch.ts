@@ -9,7 +9,6 @@ type Branch = {
   remote?: string;
 };
 
-// Shared helper function to execute diff comparison
 export async function executeDiffComparison(
   gitApi: API,
   uri: vscode.Uri,
@@ -21,20 +20,16 @@ export async function executeDiffComparison(
   await vscode.commands.executeCommand("vscode.diff", gitUri, uri, `${branchName} ↔ ${filePath}`);
 }
 
-// Helper function to find master or main branch automatically
 export async function findMasterBranch(gitApi: API, uri: vscode.Uri): Promise<Branch | null> {
   try {
-    // Get all local branches first
     const localBranches = await getBranches(gitApi, uri, false);
 
-    // Look for master or main branch (in that order of preference)
     let masterBranch = localBranches.find((branch) => branch.name === "master");
     if (!masterBranch) {
       masterBranch = localBranches.find((branch) => branch.name === "main");
     }
 
     if (!masterBranch) {
-      // If no local master/main, try remote branches
       const remoteBranches = await getBranches(gitApi, uri, true);
       masterBranch = remoteBranches.find(
         (branch) => branch.name === "origin/master" || branch.name === "origin/main"
